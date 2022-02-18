@@ -8,16 +8,16 @@ public class ShortToUnicodeString extends ArrayInitBaseListener {
     //    将 { 翻译为 "
     @Override
     public void enterInit(ArrayInitParser.InitContext ctx) {
-        System.out.println('"');
+        System.out.print('"');
     }
 
     //    将 } 翻译为 "
     @Override
     public void exitInit(ArrayInitParser.InitContext ctx) {
-        System.out.println('"');
+        System.out.print('"');
     }
 
-//    将整数翻译为十六进制 加前缀\u
+//    将整数翻译为十六进制 加前缀
     @Override
     public void enterValue(ArrayInitParser.ValueContext ctx) {
 //        此处假设不存在嵌套结构
